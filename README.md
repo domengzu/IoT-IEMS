@@ -1,4 +1,4 @@
-# IoT-Base (IEMS) | Indoor Environmental Monitoring System
+# IoT-Based (IEMS) | Indoor Environmental Monitoring System
 
 A new Flutter project.
 

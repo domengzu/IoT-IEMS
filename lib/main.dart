@@ -4,30 +4,27 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:provider/provider.dart';
 import 'services/refresh_service.dart';
-import 'views/navigation_controller.dart';
+import 'views/splash/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await AwesomeNotifications().initialize(
-    'resource://drawable/ic_launcher',
-    [
-      NotificationChannel(
-        channelGroupKey: 'environmental_monitoring_group',
-        channelKey: 'environmental_alerts',
-        channelName: 'Environmental Alerts',
-        channelDescription:
-            'Notifications for hazardous environmental conditions',
-        defaultColor: Colors.red,
-        ledColor: Colors.red,
-        importance: NotificationImportance.High,
-        channelShowBadge: true,
-        playSound: true,
-        enableVibration: false,
-        vibrationPattern: null,
-      ),
-    ],
-  );
+  await AwesomeNotifications().initialize('resource://drawable/ic_launcher', [
+    NotificationChannel(
+      channelGroupKey: 'environmental_monitoring_group',
+      channelKey: 'environmental_alerts',
+      channelName: 'Environmental Alerts',
+      channelDescription:
+          'Notifications for hazardous environmental conditions',
+      defaultColor: Colors.red,
+      ledColor: Colors.red,
+      importance: NotificationImportance.High,
+      channelShowBadge: true,
+      playSound: true,
+      enableVibration: false,
+      vibrationPattern: null,
+    ),
+  ]);
 
   await dotenv.load();
 
@@ -56,10 +53,12 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Environmental Monitoring',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 0, 100, 0),
+          ),
           useMaterial3: true,
         ),
-        home: const NavigationController(),
+        home: const SplashScreen(),
       ),
     );
   }

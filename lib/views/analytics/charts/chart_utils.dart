@@ -694,7 +694,6 @@ class EnhancedLineChartPainter extends CustomPainter {
 
     painter.layout();
 
-    // Draw background rectangle for better visibility
     final rect = Rect.fromLTWH(
       x - painter.width / 2 - 3,
       y + 3,

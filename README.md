@@ -2,6 +2,8 @@
 
 An open-source solution for monitoring indoor environmental factors using IoT sensors and real-time cloud connectivity. This project leverages Flutter for cross-platform app development and Supabase for backend data management.
 
+![image1](image1)
+
 ## Features
 
 - **Multi-Sensor Monitoring**: Tracks temperature, humidity (DHT11), noise levels, and gas concentration.

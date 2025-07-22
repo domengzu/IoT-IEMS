@@ -2,7 +2,7 @@
 
 An open-source solution for monitoring indoor environmental factors using IoT sensors and real-time cloud connectivity. This project leverages Flutter for cross-platform app development and Supabase for backend data management.
 
-<img width="520" height="1144" alt="image" src="https://github.com/user-attachments/assets/96f1f3f2-23d7-4ba2-b7c8-73d4570296b3" />
+<img width="420" height="944" alt="image" src="https://github.com/user-attachments/assets/96f1f3f2-23d7-4ba2-b7c8-73d4570296b3" />
 
 ## Features
 

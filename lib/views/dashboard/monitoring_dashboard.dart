@@ -328,7 +328,7 @@ class _MonitoringDashboardState extends State<MonitoringDashboard> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Environmental Monitoring'),
+          title: const Text('EnviroSense'),
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           actions: [
             // Only keeping the refresh button

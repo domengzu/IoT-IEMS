@@ -15,16 +15,28 @@ void main() async {
       channelKey: 'environmental_alerts',
       channelName: 'Environmental Alerts',
       channelDescription:
-          'Notifications for hazardous environmental conditions',
+          'Critical notifications for hazardous environmental conditions',
       defaultColor: Colors.red,
       ledColor: Colors.red,
-      importance: NotificationImportance.High,
+      importance: NotificationImportance.Max,
       channelShowBadge: true,
       playSound: true,
-      enableVibration: false,
-      vibrationPattern: null,
+      enableVibration: true,
+      vibrationPattern: lowVibrationPattern,
+      criticalAlerts: true,
+      defaultPrivacy: NotificationPrivacy.Public,
+      enableLights: true,
+      locked: false,
+      onlyAlertOnce: false,
+      defaultRingtoneType: DefaultRingtoneType.Alarm,
     ),
   ]);
+
+  // Request critical alert permissions for iOS and wake lock permissions
+  // await AwesomeNotifications().requestPermissionToSendNotifications(
+  //   criticalAlerts: true,
+  //   provisional: false,
+  // );
 
   await dotenv.load();
 
@@ -51,7 +63,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Environmental Monitoring',
+        title: 'EnviroSense',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(255, 0, 100, 0),
